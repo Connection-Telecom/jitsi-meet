@@ -105,7 +105,7 @@
         "yesterday": "Yesterday"
     },
     "deepLinking": {
-        "appNotInstalled": "You need the {{app}} mobile app to join this meeting on your phone.",
+        "appNotInstalled": "You need to use the Jitsi Meet mobile app to join this meeting on your phone.",
         "description": "Nothing happened? We tried launching your meeting in the {{app}} desktop app. Try again or launch it in the {{app}} web app.",
         "descriptionWithoutWeb": "",
         "downloadApp": "Download the app",

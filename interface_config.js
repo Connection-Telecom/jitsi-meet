@@ -29,7 +29,7 @@ var interfaceConfig = {
     DISPLAY_WELCOME_PAGE_CONTENT: true,
     DISPLAY_WELCOME_PAGE_TOOLBAR_ADDITIONAL_CONTENT: false,
     APP_NAME: 'Telviva One Conferencing',
-    NATIVE_APP_NAME: 'Telviva One',
+    NATIVE_APP_NAME: 'Jitsi Meet', // That's the mobile phone app - until we have our own
     PROVIDER_NAME: 'Telviva',
     LANG_DETECTION: false, // Allow i18n to detect the system language
     INVITATION_POWERED_BY: true,
