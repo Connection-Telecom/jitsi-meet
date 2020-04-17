@@ -16,7 +16,7 @@ import {
     getParticipantDisplayName
 } from '../base/participants';
 import { MiddlewareRegistry, StateListenerRegistry } from '../base/redux';
-import { playSound, registerSound, unregisterSound } from '../base/sounds';
+import { /* playSound, */registerSound, unregisterSound } from '../base/sounds';
 import { isButtonEnabled, showToolbox } from '../toolbox';
 
 import { SEND_MESSAGE, SET_PRIVATE_MESSAGE_RECIPIENT } from './actionTypes';
@@ -213,9 +213,9 @@ function _handleReceivedMessage({ dispatch, getState }, { id, message, nick, pri
     const state = getState();
     const { isOpen: isChatOpen } = state['features/chat'];
 
-    if (!isChatOpen) {
-        dispatch(playSound(INCOMING_MSG_SOUND_ID));
-    }
+    //    if (!isChatOpen) {
+    //        dispatch(playSound(INCOMING_MSG_SOUND_ID));
+    //    }
 
     // Provide a default for for the case when a message is being
     // backfilled for a participant that has left the conference.
