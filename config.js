@@ -316,7 +316,7 @@ var config = {
     // Message to show the users. Example: 'The service will be down for
     // maintenance at 01:00 AM GMT,
     noticeMessage:
-        'Telviva One Conferencing is entirely experimental.  Use is limited to those who have been invited to test it',
+        'Telviva Meetings is entirely experimental.  Use is limited to those who have been invited to test it',
 
     // Enables calendar integration, depends on googleApiApplicationClientID
     // and microsoftApiApplicationClientID
