@@ -63,7 +63,14 @@ var interfaceConfig = {
         'e2ee'
     ],
 
+    //In our version
     SETTINGS_SECTIONS: [ 'devices', 'language', 'moderator', 'profile', 'calendar' ],
+    //Ends
+    DEFAULT_BACKGROUND: '#474747',
+    DEFAULT_LOCAL_DISPLAY_NAME: 'me',
+    DEFAULT_LOGO_URL: 'images/watermark.png',
+    DEFAULT_REMOTE_DISPLAY_NAME: 'Fellow Jitster',
+    DEFAULT_WELCOME_PAGE_LOGO_URL: 'images/watermark.png',
 
     // Determines how the video would fit the screen. 'both' would fit the whole
     // screen, 'height' would fit the original video height to the height of the
@@ -151,10 +158,12 @@ var interfaceConfig = {
     CONNECTION_INDICATOR_AUTO_HIDE_ENABLED: false,
 
     /**
-     * How long the connection indicator should remain displayed before hiding.
-     * Used in conjunction with CONNECTION_INDICATOR_AUTOHIDE_ENABLED.
-     *
-     * @type {number}
+     * Hide the logo on the deep linking pages.
+     */
+    HIDE_DEEP_LINKING_LOGO: false,
+
+    /**
+     * Hide the invite prompt in the header when alone in the meeting.
      */
     CONNECTION_INDICATOR_AUTO_HIDE_TIMEOUT: 5000,
 
