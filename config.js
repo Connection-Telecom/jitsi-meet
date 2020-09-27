@@ -133,7 +133,7 @@ var config = {
 
     // How many participants while in the tile view mode, before the receiving video quality is reduced from HD to SD.
     // Use -1 to disable.
-    // maxFullResolutionParticipants: 2,
+    maxFullResolutionParticipants: 2,
 
     // w3c spec-compliant video constraints to use for video capture. Currently
     // used by browsers that return true from lib-jitsi-meet's
@@ -409,7 +409,7 @@ var config = {
     // Message to show the users. Example: 'The service will be down for
     // maintenance at 01:00 AM GMT,
     // noticeMessage:
-    //    'Telviva Meetings is in development.  Use is limited to those who have been invited to test it',
+    //    'No notice',
 
     // Enables calendar integration, depends on googleApiApplicationClientID
     // and microsoftApiApplicationClientID
@@ -574,20 +574,15 @@ var config = {
     // Local Recording
     //
 
-    // localRecording: {
-    // Enables local recording.
-    // Additionally, 'localrecording' (all lowercase) needs to be added to
-    // TOOLBAR_BUTTONS in interface_config.js for the Local Recording
-    // button to show up on the toolbar.
-    //
-    //     enabled: true,
-    //
-
-    // The recording format, can be one of 'ogg', 'flac' or 'wav'.
-    //     format: 'flac'
-    //
-
-    // },
+    localRecording: {
+        // Enables local recording.
+        // Additionally, 'localrecording' (all lowercase) needs to be added to
+        // TOOLBAR_BUTTONS in interface_config.js for the Local Recording
+        // button to show up on the toolbar.
+        enabled: true,
+        // The recording format, can be one of 'ogg', 'flac' or 'wav'.
+        format: 'wav'
+    },
 
     // Options related to end-to-end (participant to participant) ping.
     // e2eping: {
