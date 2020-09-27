@@ -41,6 +41,10 @@ var config = {
     //
 
     testing: {
+        // Disables the End to End Encryption feature. Useful for debugging
+        // issues related to insertable streams.
+        // disableE2EE: false,
+
         // P2P test mode disables automatic switching to P2P when there are 2
         // participants in the conference.
         p2pTestMode: false,
@@ -179,21 +183,22 @@ var config = {
 
     // Desktop sharing
 
-    // The ID of the jidesha extension for Chrome.
-    desktopSharingChromeExtId: null,
-
-    // Whether desktop sharing should be disabled on Chrome.
-    // desktopSharingChromeDisabled: false,
-
-    // The media sources to use when using screen sharing with the Chrome
-    // extension.
-    desktopSharingChromeSources: [ 'screen', 'window', 'tab' ],
-
-    // Required version of Chrome extension
-    desktopSharingChromeMinExtVersion: '0.1',
-
-    // Whether desktop sharing should be disabled on Firefox.
-    // desktopSharingFirefoxDisabled: false,
+// SLD: This has been removed from upstream and is presumably obsolete:
+//    // The ID of the jidesha extension for Chrome.
+//    desktopSharingChromeExtId: null,
+//
+//    // Whether desktop sharing should be disabled on Chrome.
+//    // desktopSharingChromeDisabled: false,
+//
+//    // The media sources to use when using screen sharing with the Chrome
+//    // extension.
+//    desktopSharingChromeSources: [ 'screen', 'window', 'tab' ],
+//
+//    // Required version of Chrome extension
+//    desktopSharingChromeMinExtVersion: '0.1',
+//
+//    // Whether desktop sharing should be disabled on Firefox.
+//    // desktopSharingFirefoxDisabled: false,
 
     // Optional desktop sharing frame rate options. Default value: min:5, max:5.
     // desktopSharingFrameRate: {
@@ -331,12 +336,26 @@ var config = {
     // disabled, then bandwidth estimations are disabled.
     // enableRemb: false,
 
+    // Enables ICE restart logic in LJM and displays the page reload overlay on
+    // ICE failure. Current disabled by default because it's causing issues with
+    // signaling when Octo is enabled. Also when we do an "ICE restart"(which is
+    // not a real ICE restart), the client maintains the TCC sequence number
+    // counter, but the bridge resets it. The bridge sends media packets with
+    // TCC sequence numbers starting from 0.
+    // enableIceRestart: false,
+
     // Defines the minimum number of participants to start a call (the default
     // is set in Jicofo and set to 2).
     // minParticipants: 2,
 
-    // Use XEP-0215 to fetch STUN and TURN servers.
+    // Use the TURN servers discovered via XEP-0215 for the jitsi-videobridge
+    // connection
     useStunTurn: true,
+
+    // Use TURN/UDP servers for the jitsi-videobridge connection (by default
+    // we filter out TURN/UDP because it is usually not needed since the
+    // bridge itself is reachable via UDP)
+    // useTurnUdp: false
 
     // Enable IPv6 support.
     // useIPv6: true,
@@ -495,6 +514,10 @@ var config = {
         // The Google Analytics Tracking ID:
         // googleAnalyticsTrackingId: 'your-tracking-id-UA-123456-1'
 
+        // Matomo configuration:
+        // matomoEndpoint: 'https://your-matomo-endpoint/',
+        // matomoSiteID: '42',
+
         // The Amplitude APP Key:
         // amplitudeAPPKey: '<APP_KEY>'
 
@@ -619,6 +642,28 @@ var config = {
 
     // If set to true all muting operations of remote participants will be disabled.
     // disableRemoteMute: true,
+
+    /**
+     External API url used to receive branding specific information.
+     If there is no url set or there are missing fields, the defaults are applied.
+     None of the fields are mandatory and the response must have the shape:
+     {
+         // The hex value for the colour used as background
+         backgroundColor: '#fff',
+         // The url for the image used as background
+         backgroundImageUrl: 'https://example.com/background-img.png',
+         // The anchor url used when clicking the logo image
+         logoClickUrl: 'https://example-company.org',
+         // The url used for the image used as logo
+         logoImageUrl: 'https://example.com/logo-img.png'
+     }
+    */
+    // brandingDataUrl: '',
+
+    // The URL of the moderated rooms microservice, if available. If it
+    // is present, a link to the service will be rendered on the welcome page,
+    // otherwise the app doesn't render it.
+    // moderatedRoomServiceUrl: 'https://moderated.jitsi-meet.example.com',
 
     // List of undocumented settings used in jitsi-meet
     /**
