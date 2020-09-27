@@ -116,7 +116,7 @@
         "yesterday": "Yesterday"
     },
     "deepLinking": {
-        "appNotInstalled": "You need to use the Jitsi Meet mobile app to join this meeting on your phone.",
+        "appNotInstalled": "You need to use the Telviva Meet mobile app to join this meeting on your phone.",
         "description": "Nothing happened? We tried launching your meeting in the {{app}} desktop app. Try again or launch it in the {{app}} web app.",
         "descriptionWithoutWeb": "",
         "downloadApp": "Download the app",
@@ -726,7 +726,7 @@
             "join": "Tap to join",
             "roomname": "Enter room name"
         },
-        "appDescription": "{{app}} is a video conferencing solution for Telviva. Right now this is an experimental service. You may only use it if you have been specifically invited to do so.",
+        "appDescription": "{{app}} provides video conferencing and other collaboration capabilities for Telviva One",
         "audioVideoSwitch": {
             "audio": "Voice",
             "video": "Video"
@@ -747,7 +747,7 @@
         "roomnameHint": "Enter the name or URL of the room you want to join. You may make a name up, just let the people you are meeting know it so that they enter the same name.",
         "sendFeedback": "Send feedback",
         "terms": "Terms",
-        "title": "Telviva Meetings"
+        "title": "Telviva One Premium"
     },
     "documentSharing": {
         "title": ""
