@@ -44,7 +44,7 @@
     },
     "calendarSync": {
         "addMeetingURL": "Add a meeting link",
-        "confirmAddLink": "Do you want to add a Jitsi link to this event?",
+        "confirmAddLink": "Do you want to add a Telviva link to this event?",
         "error": {
             "appConfiguration": "Calendar integration is not properly configured.",
             "generic": "An error has occurred. Please check your calendar settings or try refreshing the calendar.",
@@ -136,7 +136,7 @@
         "yesterday": "Yesterday"
     },
     "deepLinking": {
-        "appNotInstalled": "You need to use the Jitsi Meet mobile app to join this meeting on your phone.",
+        "appNotInstalled": "You need to use the Telviva Meet mobile app to join this meeting on your phone.",
         "description": "Nothing happened? We tried launching your meeting in the {{app}} desktop app. Try again or launch it in the {{app}} web app.",
         "descriptionWithoutWeb": "Nothing happened? We tried launching your meeting in the {{app}} desktop app.",
         "downloadApp": "Download the app",
@@ -492,7 +492,7 @@
         "newDeviceAudioTitle": "New audio device detected",
         "newDeviceAction": "Use",
         "OldElectronAPPTitle": "Security vulnerability!",
-        "oldElectronClientDescription1": "You appear to be using an old version of the Jitsi Meet client which has known security vulnerabilities. Please make sure you update to our ",
+        "oldElectronClientDescription1": "You appear to be using an old version of the Telviva Meet client which has known security vulnerabilities. Please make sure you update to our ",
         "oldElectronClientDescription2": "latest build",
         "oldElectronClientDescription3": " now!"
     },
@@ -860,7 +860,7 @@
             "join": "Tap to join",
             "roomname": "Enter room name"
         },
-        "appDescription": "{{app}} is a video conferencing solution for Telviva. Right now this is an experimental service. You may only use it if you have been specifically invited to do so.",
+        "appDescription": "{{app}} provides video conferencing and other collaboration capabilities for Telviva One",
         "audioVideoSwitch": {
             "audio": "Voice",
             "video": "Video"
